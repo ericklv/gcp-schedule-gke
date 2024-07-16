@@ -54,8 +54,15 @@ Send a `POST` method to `${your-domain}/k8s/:action` where `:action` can be `dow
 
 # Schedule
 
+1. Configure a google account service in GCP and add Kubernetes Engine Cluster Admin permissions.
+2. Generate a key file as JSON [Ref](https://cloud.google.com/sdk/gcloud/reference/auth/activate-service-account). 
+3. Update Dockerfile with this values.  
+   - `key-file` is your JSON  
+   - `project` is project-id of instances.
+   - `activate-service-account` is your google account service.
+
 Add your `cloudbuild.yaml`, configure a Cloud Build Trigger and deploy as Cloud Run, use Cloud Schdeuler to call API when you need.
 
 
-Good Luck Have Fun.
+Good luck, have fun.
 
