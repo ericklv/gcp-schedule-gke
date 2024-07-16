@@ -25,24 +25,24 @@ go run main.go
 # Request
 Send a `POST` method to `${your-domain}/k8s/:action` where `:action` can be `down` or `up`
 
-# Body Examples
-## Down
+## Body Examples
+### Down
 ```JSON
 {
 	"cluster": "tiny-cluster",
 	"zone": "us-central1-a",
-	"project": "tiny-proyect",
+	"project": "tiny-project",
 	"namespace": "tiny-nspace",
 	"nodepool": "tiny-pool"
 }
 ```
 
-## Up
+### Up
 
 ```JSON
 	"cluster": "tiny-cluster",
 	"zone": "us-central1-a",
-	"project": "tiny-proyect",
+	"project": "tiny-project",
 	"namespace": "tiny-nspace",
 	"nodepool": "tiny-pool",
 	"machineSpecs": {
@@ -51,4 +51,11 @@ Send a `POST` method to `${your-domain}/k8s/:action` where `:action` can be `dow
 		"numNodes": "1"
 }
 ```
+
+# Schedule
+
+Add your `cloudbuild.yaml`, configure a Cloud Build Trigger and deploy as Cloud Run, use Cloud Schdeuler to call API when you need.
+
+
+Good Luck Have Fun.
 
