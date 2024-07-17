@@ -4,9 +4,9 @@ To run needs golang >= 1.22 and Gcloud SDK. Your account must have Kubernetes En
 # Previous
 You need a cluster configured, when you send `down` as param this code reduce to 0 replicas all deployments in one namespace. Is necesary all deployments associated with an environment must have the nodeSelector in the same node-pool and namespace.
 
-Whe you send `up` as param, recreates a node pool and set al deployment replicas to 1
+Whe you send `up` as param, recreates a node pool and set all deployment replicas to 1
 
-In this case you can create a test node-pool, namespace and deployment with next steps:
+In this case you can create a node-pool, namespace and deployment with next steps:
 
 ```bash
 kubectl config use-context ${your-gke-context}
